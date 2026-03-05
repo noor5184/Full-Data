@@ -182,7 +182,8 @@ Use the curated runner to view the highest-signal demonstrations without searchi
 * `radix_linked` — radix sort on linked list
 * `gnome_array` — gnome sort on arrays + swap counter
 * `gnome_deque` — gnome sort on deque + swap counter
-* (Optional L10 demos can also be exposed here if included)
+* `sorts_array` — classic sorting algorithms on arrays (Lab 10 array sorting test suite)
+* `sorts_linked` — classic sorting algorithms on linked lists (Lab 10 linked-list sorting test suite)
 
 ---
 
