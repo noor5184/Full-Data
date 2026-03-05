@@ -1,0 +1,112 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2025-10-11
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+
+
+========================================
+List_array — Movie ADT Comprehensive Test
+========================================
+========================================
+Append / Prepend / __getitem__ / remove_front / remove_many / clean
+========================================
+Start (empty) count=0 -> []
+After append a,b,c count=3 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+After prepend d count=4 -> ['Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+__getitem__(1) -> Alpha (2001), dir. Dir, rating: 7.0, genres: 
+After remove_front count=3 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+After appending duplicates count=5 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ']
+After remove_many(b) count=3 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ']
+Before clean (dups added) count=6 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+After clean (first occurrences preserved) count=2 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+========================================
+__eq__
+========================================
+A == B -> True
+A == B after B.remove_front() -> False
+========================================
+combine(source1, source2)
+========================================
+S1 before count=3 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ']
+S2 before count=2 -> ['Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ']
+Target after combine count=5 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ']
+S1 after (empty) count=0 -> []
+S2 after (empty) count=0 -> []
+========================================
+split() and split_alt()
+========================================
+Source before split count=5 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ']
+Split target1 count=3 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+Split target2 count=2 -> ['Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ']
+Source after split (empty) count=0 -> []
+Source before split_alt count=4 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ']
+split_alt target1 count=2 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+split_alt target2 count=2 -> ['Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ']
+Source after split_alt (empty) count=0 -> []
+========================================
+union(source1, source2) and intersection(source1, source2)
+========================================
+S1 count=4 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ']
+S2 count=4 -> ['Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ', 'Alpha (2001), dir. Dir, rating: 7.0, genres: ']
+Union(S1,S2) count=5 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Bravo (2002), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ', 'Delta (2004), dir. Dir, rating: 7.0, genres: ', 'Echo (2005), dir. Dir, rating: 7.0, genres: ']
+Intersection(S1,S2) count=2 -> ['Alpha (2001), dir. Dir, rating: 7.0, genres: ', 'Charlie (2003), dir. Dir, rating: 7.0, genres: ']
+========================================
+Empty-list edge cases
+========================================
+Empty start count=0 -> []
+remove_front on empty raised: Cannot remove from an empty list
+Union of two empties count=0 -> []
+Intersection of two empties count=0 -> []
+Split empty target1 count=0 -> []
+Split empty target2 count=0 -> []
+Split_alt empty target1 count=0 -> []
+Split_alt empty target2 count=0 -> []
+All tests completed.
+)  
+
+
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+
+
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+
+
+
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+
+
+
+
+
+
+-------------------------------------------------------
+-------------------------------------------------------

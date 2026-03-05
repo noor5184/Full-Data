@@ -1,0 +1,7 @@
+Based on the results from test_Sorts_array, the best and worst really depend on how the data starts out. On already sorted data the winners are the simple algorithms like Insertion Sort, Binary
+ Insertion Sort, Bubble Sort, and Cocktail Sort as they do almost no swaps and only about n-1 comparisons, so they’re extremely efficient when the list is ordered. On reverse ordered data,
+  those same simple methods become very bas as Bubble and Insertion explode to roughly O(n²) comparisons and swaps, while algorithms like Merge Sort, Heap Sort, and Quick Sort stay close to
+   O(n log n) and look much better. On random data, the consistently strongest algorithms are the O(n log n) ones as Merge Sort, Heap Sort, Quick Sort, and often Shell Sort / Comb Sort, while Bubble 
+   Sort and Cocktail Sort tend to be the worst overall, with Selection Sort doing a fixed large number of comparisons regardless of input order. So there isn’t a single absolute best algorithm in 
+   every situation, but in terms of overall efficiency across random and worst-case inputs, the divide is pretty clear as the O(n log n) sorts (Merge/Heap/Quick) are the best general choices, 
+   and Bubble/Cocktail are the worst overall except in the very special case where the data is already nearly sorted.

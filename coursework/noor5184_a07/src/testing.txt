@@ -1,0 +1,276 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2025-11-08
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+
+
+REQUIRED METHODS TESTS
+----------------------
+
+After prepend/append
+count=4
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+getitem [0]: Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+getitem [1]: The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+getitem [-1]: Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+
+== __eq__ ==
+l1 == l2: True
+l1 == l2 after extra append: False
+
+== remove_front / remove_many ==
+
+Original with duplicates of 'Alien' 1979
+count=8
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+
+remove_front returned: Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+After remove_front
+count=7
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+
+After remove_many(key='Alien' 1979)
+count=4
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+
+== split / split_alt ==
+
+split: target1 (>=50%)
+count=3
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+
+split: target2 (<=50%)
+count=3
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+split_alt: target1
+count=3
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+
+split_alt: target2
+count=2
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+
+== clean ==
+
+Before clean
+count=11
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+After clean (first occurrences preserved)
+count=6
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+== combine / intersection / union ==
+
+combine target (interlaced, sources empty)
+count=8
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+source1 after combine (should be empty)
+count=0
+
+source2 after combine (should be empty)
+count=0
+
+intersection of target with itself
+count=6
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+union of s3 and s4 (no repeats)
+count=5
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+
+
+
+
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+
+
+
+SORTED_LIST REQUIRED METHODS TESTS
+----------------------------------
+
+After sorted insertions
+count=7
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Zodiac (2007), dir. David Fincher, rating: 7.7, genres: mystery, drama
+getitem [0]: Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+getitem [-1]: Zodiac (2007), dir. David Fincher, rating: 7.7, genres: mystery, drama
+contains 'Alien' 1979: True
+index of 'Alien' 1979: 0
+find 'Godfather': The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+
+== remove / remove_front ==
+
+Original for removal
+count=6
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+
+remove_front returned: Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+
+After remove_front
+count=5
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+
+remove key returned: The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+
+After remove(key)
+count=4
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+
+remove missing returned: None
+
+== min / max / peek ==
+
+For min/max/peek
+count=6
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+Zodiac (2007), dir. David Fincher, rating: 7.7, genres: mystery, drama
+min: Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+max: Zodiac (2007), dir. David Fincher, rating: 7.7, genres: mystery, drama
+peek: Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+
+== count / clean ==
+
+Before clean (with duplicates)
+count=11
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+count of 'Alien' 1979: 2
+
+After clean (first occurrences preserved)
+count=6
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+count of 'Alien' 1979 after clean: 1
+
+== union / intersection / __eq__ ==
+
+union(s1,s2)
+count=6
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+Aliens (1986), dir. James Cameron, rating: 8.3, genres: science fiction, action
+Arrival (2016), dir. Denis Villeneuve, rating: 7.9, genres: science fiction, drama
+Gladiator (2000), dir. Ridley Scott, rating: 8.5, genres: action, historical, war
+The Godfather (1972), dir. Francis Ford Coppola, rating: 9.2, genres: drama, mystery
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+
+intersection(s1,s2)
+count=2
+Alien (1979), dir. Ridley Scott, rating: 8.5, genres: science fiction, horror
+The Godfather Part II (1974), dir. Francis Ford Coppola, rating: 9.0, genres: drama, mystery
+s1 == s3: True
+s1 == s2: False
+
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+
+
+-------------------------------------------------------

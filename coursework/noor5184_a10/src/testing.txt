@@ -1,0 +1,171 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2025-11-29
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+
+Radix Sort Test 1
+Original: []
+Sorted:   []
+
+Radix Sort Test 2
+Original: [5]
+Sorted:   [5]
+
+Radix Sort Test 3
+Original: [170, 45, 75, 90, 802, 24, 2, 66]
+Sorted:   [2, 24, 45, 66, 75, 90, 170, 802]
+
+Radix Sort Test 4
+Original: [5, 4, 3, 2, 1, 0]
+Sorted:   [0, 1, 2, 3, 4, 5]
+
+Radix Sort Test 5
+Original: [10, 10, 3, 3, 3, 0, 100, 9, 9]
+Sorted:   [0, 3, 3, 3, 9, 9, 10, 10, 100]
+
+
+
+
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+
+Radix Sort (Linked) Test 1
+Original: []
+Sorted:   []
+
+Radix Sort (Linked) Test 2
+Original: [5]
+Sorted:   [5]
+
+Radix Sort (Linked) Test 3
+Original: [170, 45, 75, 90, 802, 24, 2, 66]
+Sorted:   [2, 24, 45, 66, 75, 90, 170, 802]
+
+Radix Sort (Linked) Test 4
+Original: [5, 4, 3, 2, 1, 0]
+Sorted:   [0, 1, 2, 3, 4, 5]
+
+Radix Sort (Linked) Test 5
+Original: [10, 10, 3, 3, 3, 0, 100, 9, 9]
+Sorted:   [0, 3, 3, 3, 9, 9, 10, 10, 100]
+
+Radix Sort (Linked) Test 6
+Original: [-5, -10, 3, 0, -1]
+Sorted:   [-10, -5, -1, 0, 3]
+
+Radix Sort (Linked) Test 7
+Original: [-1, -1, 0, 1]
+Sorted:   [-1, -1, 0, 1]
+
+Radix Sort (Linked) Test 8
+Original: [0, -2, 2]
+Sorted:   [-2, 0, 2]
+
+Radix Sort (Linked) Test 9
+Original: [-100, -1, -50, -3]
+Sorted:   [-100, -50, -3, -1]
+
+
+
+
+
+
+-------------------------------------------------------
+
+t03
+-------------------------------------------------------
+
+Gnome Sort Test 1
+Original: []
+Sorted:   []
+Swaps:    0
+
+Gnome Sort Test 2
+Original: [5]
+Sorted:   [5]
+Swaps:    0
+
+Gnome Sort Test 3
+Original: [5, 4, 3, 2, 1, 0]
+Sorted:   [0, 1, 2, 3, 4, 5]
+Swaps:    15
+
+Gnome Sort Test 4
+Original: [3, 1, 4, 1, 5, 9, 2, 6, 5]
+Sorted:   [1, 1, 2, 3, 4, 5, 5, 6, 9]
+Swaps:    10
+
+Gnome Sort Test 5
+Original: [10, 10, 3, 3, 3, 0, 100, 9, 9]
+Sorted:   [0, 3, 3, 3, 9, 9, 10, 10, 100]
+Swaps:    17
+
+
+
+
+EXPLANATION: 
+
+Gnome Sort has the same theoretical time complexity as both Insertion Sort and Selection Sort as in the average and worst cases all three are 0(n^2). However, its behaviour is closer to
+a bubble style insertion as when it finds an out of order pair it repeatedly swaps the current element backward until it is in the correct position. This makes Gnome Sort similar to  
+Insertion Sort because both can run in O(n) time on an already or almost sorted array, while Selection Sort still does Θ(n^2) comparisons even in the best case. In practice however 
+Gnome Sort tends to perform more swaps than Insertion Sort on the same data, because Insertion Sort shifts values forward in the array instead of swapping on every step backward. Selection Sort 
+usually minimizes swaps (about n−1) but in turn pays for that with the maximum possible number of comparisons and no advantage when the input is nearly sorted. Therefore, Gnome Sort is typically less
+efficient than Insertion Sort but can outperform Selection Sort on partially sorted data, while all three remain quadratic algorithms.
+
+
+
+
+
+
+
+-------------------------------------------------------
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+Gnome Sort (Deque) Test 1
+Original: []
+Sorted:   []
+Swaps:    0
+
+Gnome Sort (Deque) Test 2
+Original: [5]
+Sorted:   [5]
+Swaps:    0
+
+Gnome Sort (Deque) Test 3
+Original: [5, 4, 3, 2, 1, 0]
+Sorted:   [4, 5, 3, 2, 1, 0]
+Swaps:    1
+
+Gnome Sort (Deque) Test 4
+Original: [3, 1, 4, 1, 5, 9, 2, 6, 5]
+Sorted:   [1, 3, 4, 1, 5, 9, 2, 6, 5]
+Swaps:    1
+
+Gnome Sort (Deque) Test 5
+Original: [10, 10, 3, 3, 3, 0, 100, 9, 9]
+Sorted:   [3, 10, 10, 3, 3, 0, 100, 9, 9]
+Swaps:    2
+
+Gnome Sort (Deque) Test 6
+Original: [-5, -10, 3, 0, -1]
+Sorted:   [-10, -5, 3, 0, -1]
+Swaps:    1
+
+
+
+
+
+
+-------------------------------------------------------

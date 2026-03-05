@@ -1,0 +1,213 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2025-10-10
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+
+-5
+
+
+
+
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+
+ 
+========================================
+Testing Recursive Greatest Common Divisor (GCD) Function
+========================================
+
+Calculating gcd(48, 18)...
+Result: The GCD of 48 and 18 is 6
+
+Calculating gcd(20, 8)...
+Result: The GCD of 20 and 8 is 4
+
+Calculating gcd(17, 13)...
+Result: The GCD of 17 and 13 is 1
+
+Calculating gcd(100, 25)...
+Result: The GCD of 100 and 25 is 25
+
+Calculating gcd(81, 27)...
+Result: The GCD of 81 and 27 is 27
+
+Calculating gcd(42, 56)...
+Result: The GCD of 42 and 56 is 14
+
+========================================
+All tests completed.
+========================================
+
+
+-------------------------------------------------------
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+
+
+
+========================================
+Testing Recursive Vowel Count Function
+========================================
+
+Analyzing: 'Recursion'
+Result: The string 'Recursion' contains 4 vowel(s).
+
+Analyzing: 'AEIOU'
+Result: The string 'AEIOU' contains 5 vowel(s).
+
+Analyzing: 'Python'
+Result: The string 'Python' contains 1 vowel(s).
+
+Analyzing: 'sky'
+Result: The string 'sky' contains 0 vowel(s).
+
+Analyzing: 'beautiful day'
+Result: The string 'beautiful day' contains 6 vowel(s).
+
+Analyzing: 'WLU Computer Science'
+Result: The string 'WLU Computer Science' contains 7 vowel(s).
+
+========================================
+All tests completed.
+========================================
+
+
+
+
+
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+
+
+
+
+========================================
+Testing Recursive Power Function (base ^ power)
+========================================
+
+Calculating 2^3 ...
+Result: 2^3 = 8
+
+Calculating 5^0 ...
+Result: 5^0 = 1
+
+Calculating 3^1 ...
+Result: 3^1 = 3
+
+Calculating 2^-2 ...
+Result: 2^-2 = 0.25
+
+Calculating -2^3 ...
+Result: -2^3 = -8
+
+Calculating -3^2 ...
+Result: -3^2 = 9
+
+Calculating 10^-1 ...
+Result: 10^-1 = 0.1
+
+========================================
+All tests completed.
+========================================
+
+
+
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+
+
+
+
+
+========================================
+Testing Recursive Palindrome Function
+========================================
+
+Testing: "racecar"
+Result: The string is a palindrome.
+
+Testing: "A man, a plan, a canal: Panama"
+Result: The string is a palindrome.
+
+Testing: "No lemon, no melon"
+Result: The string is a palindrome.
+
+Testing: "Was it a car or a cat I saw?"
+Result: The string is a palindrome.
+
+Testing: "Recursion"
+Result: The string is NOT a palindrome.
+
+Testing: "Hello"
+Result: The string is NOT a palindrome.
+
+Testing: "Madam"
+Result: The string is a palindrome.
+
+========================================
+All tests completed.
+========================================
+
+
+
+
+-------------------------------------------------------
+t06
+-------------------------------------------------------
+
+
+
+========================================
+Testing Recursive Bag to Set Function
+========================================
+
+Original list: [4, 5, 3, 4, 5, 2, 2, 4]
+New list (unique values, order preserved): [4, 5, 3, 2]
+
+Original list: [1, 2, 3, 3, 2, 1]
+New list (unique values, order preserved): [1, 2, 3]
+
+Original list: ['a', 'b', 'a', 'c', 'b', 'd']
+New list (unique values, order preserved): ['a', 'b', 'c', 'd']
+
+Original list: []
+New list (unique values, order preserved): []
+
+Original list: [10, 10, 10]
+New list (unique values, order preserved): [10]
+
+Original list: [7, 8, 9]
+New list (unique values, order preserved): [7, 8, 9]
+
+========================================
+All tests completed.
+========================================
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------
+
+-------------------------------------------------------

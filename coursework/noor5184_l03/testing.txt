@@ -1,0 +1,57 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2024-09-27
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+'Twinkle Twinkle Little Star' by Jane Taylor
+
+Twinkle, twinkle, little star,
+    How I wonder what you are!
+        Up above the world so high,
+        Like a diamond in the sky.
+Twinkle, twinkle, little star,
+    How I wonder what you are!
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+Enter minimum:45
+Enter maximum:567
+
+The difference between  567 and  45 is  522
+
+-------------------------------------------------------
+t08
+-------------------------------------------------------
+Enter amount of dirt (m^3): 500
+Enter amount of gravel (m^3):400
+Enter amount of sand (m^3):45
+
+Material       Cubic Metres
+Dirt           500.0
+Gravel         400.0
+Sand            45.0
+Total          945.0
+-------------------------------------------------------
+t14
+-------------------------------------------------------
+Enter number of minutes: 3369
+There are 2 days,  8 hours, and 9 minutes in 3369 minutes
+
+-------------------------------------------------------
+t15
+-------------------------------------------------------
+ 654321
+ 654321.000000
+ 654.320000
+Hello World
+
+-------------------------------------------------------

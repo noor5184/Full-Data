@@ -1,0 +1,128 @@
+"""
+-------------------------------------------------------
+Lab/Assignment  Testing
+-------------------------------------------------------
+Author:  Ali Noormohammadi
+ID:      169105184
+Email:   noor5184@mylaurier.ca
+Version: 2025-10-04
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+-------------------------------------------------------
+
+
+source1  5, 8, 12, 8
+source2  7, 9, 14
+target   5, 7, 8, 9, 12, 14, 8
+source1 (empty check)  
+source2 (empty check)  
+
+
+
+-------------------------------------------------------
+t02
+-------------------------------------------------------
+
+source1  5, 8, 12, 8
+source2  7, 9, 14
+target   5, 7, 8, 9, 12, 14, 8
+source1 (empty check)  
+source2 (empty check)  
+
+
+-------------------------------------------------------
+t03
+-------------------------------------------------------
+
+Before split:
+source   5, 12, 7, 3, 14, 9, 8
+
+After split with key = 8
+target1 (> key)  14, 12, 9
+target2 (<= key)  8, 7, 5, 3
+source (empty)  
+
+Edge case: all <= key
+source2   1, 1, 1
+t1   
+t2   1, 1, 1
+source2 (empty)  
+
+Edge case: all > key
+source3   10, 11, 12
+t1   12, 11, 10
+t2   
+source3 (empty)  
+
+
+
+-------------------------------------------------------
+t04
+-------------------------------------------------------
+
+
+Before split_key:
+source   5, 12, 7, 3, 14, 9, 8
+
+After split_key with key = 8
+target1 (> key)  12, 14, 9
+target2 (<= key)  5, 7, 3, 8
+source (empty)  
+
+Edge case: all <= key
+source2   1, 1, 1
+t1   
+t2   1, 1, 1
+source2 (empty)  
+
+Edge case: all > key
+source3   10, 11, 12
+t1   10, 11, 12
+t2   
+source3 (empty)  
+
+
+
+
+
+-------------------------------------------------------
+t05
+-------------------------------------------------------
+
+
+
+== Basic inserts ==
+q        1, 2, 7, 9
+state    _values=[1, 2, 7, 9, 'N', 'N', 'N']  front=0  rear=4  count=4  empty=False  full=False
+
+== Peek and length ==
+peek: 1
+len : 4
+
+== Remove two, then wrap with three inserts ==
+removed: 1 2
+q        7, 9, 1, 2, 7
+state    _values=['N', 'N', 7, 9, 1, 2, 7]  front=2  rear=0  count=5  empty=False  full=False
+
+== Fill to capacity and test is_full ==
+q        7, 9, 1, 2, 7, 9
+state    _values=[9, 'N', 7, 9, 1, 2, 7]  front=2  rear=1  count=6  empty=False  full=False
+
+== Drain queue completely and test is_empty ==
+drained: [7, 9, 1, 2, 7, 9]
+state    _values=['N', 'N', 'N', 'N', 'N', 'N', 'N']  front=None  rear=0  count=0  empty=True  full=False
+
+== Equality with different internal layouts ==
+qa       1, 2, 7, 9
+qa int   _values=[1, 2, 7, 9, 'N', 'N', 'N']  front=0  rear=4  count=4  empty=False  full=False
+qb       1, 2, 7, 9
+qb int   _values=['N', 'N', 1, 2, 7, 9, 'N']  front=2  rear=6  count=4  empty=False  full=False
+qa == qb ? True
+
+
+
+
+-------------------------------------------------------
+-------------------------------------------------------
