@@ -9,100 +9,183 @@ This repository is a comprehensive Python implementation of core data structures
 
 ---
 
-## What’s Implemented (High Level)
+# Data Structures & Algorithms Backend (Python)
 
-The shared backend (the main “engine”) includes implementations and algorithms across:
+A portfolio repository showcasing a full suite of core data structures and algorithms implemented and exercised through extensive lab/assignment testers. The repo includes a shared “engine” library, the original coursework modules, and runner utilities so everything executes correctly on any machine after cloning (no Eclipse/PyDev referenced-project setup required).
 
-- Linear ADTs: stacks, queues, circular queues, deques, priority queues  
-- Lists: array-based lists, linked lists, sorted lists  
-- Trees: linked Binary Search Tree (BST)  
-- Hashing: hash-set variants (multiple strategies)  
-- Sorting: classic sorting algorithms applied to arrays and linked structures  
-- Object handling: example domain objects used for ordering/searching (e.g., Movie/Word/Number)
+## Quick Start (Recommended)
+
+### Requirements
+
+* Python 3.x installed (no external packages required)
+
+### Run curated demos (fastest way to evaluate)
+
+From the repository root:
+
+**Windows**
+
+* `python runners\run_demo.py list`
+* `python runners\run_demo.py postfix`
+* `python runners\run_demo.py all`
+
+**macOS/Linux**
+
+* `python runners/run_demo.py list`
+* `python runners/run_demo.py postfix`
+* `python runners/run_demo.py all`
+
+If you want to run a specific lab/assignment tester directly, use `run_tester.py` (see below).
+
+---
+
+## What’s Implemented
+
+The shared backend contains implementations and algorithms across:
+
+* **Linear ADTs:** stack, queue, circular queue, deque, priority queue
+* **Lists:** array list, linked list, sorted list (array + linked)
+* **Trees:** linked Binary Search Tree (BST)
+* **Hashing:** hash-set variants with different bucket strategies
+* **Sorting:** classic sorts across arrays, linked lists, and deques
+* **Object modeling:** domain objects for ordering/searching (e.g., `Movie`, `Word`, `Number`)
 
 ---
 
 ## Repository Layout
 
-- `noor5184_data_structures/`  
-  Shared backend “library” used throughout labs/assignments.  
-  Key code lives in: `noor5184_data_structures/src/`
+* `noor5184_data_structures/`
+  Shared backend “library” used throughout labs/assignments.
+  Core code lives in: `noor5184_data_structures/src/`
 
-- `coursework/`  
-  Full lab (`noor5184_lXX`) and assignment (`noor5184_aXX`) modules.  
-  Each module contains runnable tester scripts (commonly `t01.py`, `t02.py`, etc.), usually inside a `src/` folder.
+* `coursework/`
+  Full lab (`noor5184_lXX`) and assignment (`noor5184_aXX`) modules, including runnable tester scripts (`t01.py`, `t02.py`, …).
 
-- `runners/`  
-  Runner utilities that make testers runnable from the repo root on a standard Python installation.
+* `runners/`
+  Runner utilities that make testers runnable from the repo root on a standard Python installation:
+
+  * `run_tester.py` — run any tester by path
+  * `run_demo.py` — run a curated set of “best-of” demos by name
 
 ---
 
-## How To Run (Full Project: Any Lab/Assignment Tester)
+## Running Any Tester (Full Project)
 
 ### Why a runner is needed
-In the original Eclipse/PyDev setup, `noor5184_data_structures/src` was configured as a referenced project, which made imports like:
+
+In the original Eclipse/PyDev course setup, `noor5184_data_structures/src` was configured as a referenced project, so imports like:
 
 `from Stack_array import Stack`
 
-work automatically inside lab/assignment code.
+worked automatically inside lab/assignment code.
 
-A normal Python environment does not include that path by default. To make the project runnable anywhere after cloning, use the provided runner which injects the correct `PYTHONPATH` and runs testers with the correct working directory.
+A normal Python environment doesn’t include that path by default. `run_tester.py` recreates this behavior by injecting the correct `PYTHONPATH` and running testers with the correct working directory.
 
-### Run any tester with `run_tester.py`
+### Run any lab/assignment tester
+
 From the repository root:
 
 **Windows**
-    python runners\run_tester.py <relative-path-to-tester>
+
+* `python runners\run_tester.py <relative-path-to-tester>`
 
 **macOS/Linux**
-    python runners/run_tester.py <relative-path-to-tester>
 
-### Example command
-**Windows**
-    python runners\run_tester.py coursework\noor5184_a03\src\t05.py
+* `python runners/run_tester.py <relative-path-to-tester>`
 
-**macOS/Linux**
-    python runners/run_tester.py coursework/noor5184_a03/src/t05.py
-
-### How to find testers
-Most testers are located under `coursework/` inside lab/assignment folders, usually in a `src/` subfolder.
-
-Common patterns:
-- `coursework/noor5184_aXX/src/t01.py`
-- `coursework/noor5184_aXX/src/t02.py`
-- `coursework/noor5184_lXX/src/t01.py`
-
-To list testers in a given module:
+Example:
 
 **Windows**
-    dir coursework\noor5184_a03\src
+
+* `python runners\run_tester.py coursework\noor5184_a03\src\t05.py`
 
 **macOS/Linux**
-    ls coursework/noor5184_a03/src
 
-### Notes about output / behavior
-- Some testers print results to the console.
-- Some testers validate correctness without printing; an exit code of `0` indicates success.
-- `run_tester.py` runs the tester with the tester’s own folder as the working directory so relative file access (if any) behaves as expected.
+* `python runners/run_tester.py coursework/noor5184_a03/src/t05.py`
+
+### Finding testers
+
+Most testers are located under `coursework/` inside lab/assignment folders, often in a `src/` subfolder.
+
+Examples:
+
+* `coursework/noor5184_aXX/src/t01.py`
+* `coursework/noor5184_lXX/src/t01.py`
+
+List a module folder to see what’s available:
+
+**Windows**
+
+* `dir coursework\noor5184_a03\src`
+
+**macOS/Linux**
+
+* `ls coursework/noor5184_a03/src`
+
+### Notes on output
+
+* Some testers print results; others validate correctness quietly (exit code `0` indicates success).
+* Some testers expect local data files (e.g., text corpora). The runner executes from the tester’s folder so relative file reads work as intended.
 
 ---
 
-## Curated Demos (Quick Portfolio Tour)
+## Curated Demos (Portfolio Tour)
 
-If you want a quick “best-of” tour without searching through the folder structure, use the curated demo runner (if included in this repo):
+Use the curated runner to view the highest-signal demonstrations without searching through folders:
 
 **Windows**
-    python runners\run_demo.py list
-    python runners\run_demo.py <demo-name>
+
+* `python runners\run_demo.py list`
+* `python runners\run_demo.py <demo>`
+* `python runners\run_demo.py all`
 
 **macOS/Linux**
-    python runners/run_demo.py list
-    python runners/run_demo.py <demo-name>
 
-The curated runner maps short demo names (e.g., `postfix`, `maze`, etc.) to specific tester scripts under `coursework/` and runs them through the same environment setup as `run_tester.py`.
+* `python runners/run_demo.py list`
+* `python runners/run_demo.py <demo>`
+* `python runners/run_demo.py all`
+
+### Recommended demos to run
+
+(These names correspond to keys in `runners/run_demo.py`.)
+
+**Applied stacks**
+
+* `postfix` — postfix expression evaluation using a stack
+* `maze` — DFS maze solving using a stack
+* `reroute` — stack-based rail-yard reroute simulation
+
+**Queues / scheduling**
+
+* `circular_queue_wrap` — circular queue (ring buffer) wraparound + full/empty invariants + equality
+* `pq_split_key_func` — priority queue partition by key (standalone function)
+* `pq_split_key_method` — priority queue partition by key (ADT method)
+
+**Lists + object handling**
+
+* `list_array` — array list ADT operations demo
+* `list_movies` — array list + `Movie` objects (combine/split/union/intersection + edge cases)
+* `sorted_list_movies` — sorted array list + `Movie` objects (ordered insert + split_key + duplicates/clean)
+* `list_linked_movies` — linked list + `Movie` objects (core ops + transforms)
+* `sorted_linked_movies` — sorted linked list + `Movie` objects (ordered insert + queries + union/intersection)
+
+**Hashing + BST**
+
+* `hashset_array_buckets` — hash set benchmark (array buckets) using word corpus; reports total/worst comparisons
+* `hashset_sorted_buckets` — hash set benchmark (sorted buckets)
+* `hashset_bst_buckets` — hash set benchmark (BST buckets)
+* `bst_parent_counts` — BST traversal + node counts + parent lookup (iterative vs recursive)
+
+**Sorting**
+
+* `radix_array` — radix sort on arrays
+* `radix_linked` — radix sort on linked list
+* `gnome_array` — gnome sort on arrays + swap counter
+* `gnome_deque` — gnome sort on deque + swap counter
+* (Optional L10 demos can also be exposed here if included)
 
 ---
 
-## Attribution / Provenance (Important)
+## Attribution / Provenance
 
-This repository includes course-based lab/assignment structure and may include starter templates/interfaces provided by the CP164 course. Implementations and modifications are mine where indicated, and the project is presented here as a portfolio demonstration of data structures, algorithms, and ADT-based design in Python.re and may include starter templates/interfaces provided by the CP164 course. Implementations and modifications are mine where indicated, and the project is presented here as a portfolio demonstration of data structures, algorithms, and ADT-based design in Python.
+This repository contains the original CP164 lab/assignment structure. Some modules began from course-provided skeletons/templates; implementations, extensions, and the lab/assignment solution work are mine where indicated. This repo is published as a portfolio demonstration of data structures, algorithms, ADT design, and correctness/performance testing in Python.
