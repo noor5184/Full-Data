@@ -21,7 +21,7 @@ A portfolio repository showcasing a full suite of core data structures and algor
 
 ### Run curated demos (fastest way to evaluate)
 
-From the repository root:
+From the repository root (where you have saved the contents of file (ex. cd "%USERPROFILE%\OneDrive\Documents\ds-engine":
 
 **Windows**
 
